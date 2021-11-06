@@ -42,6 +42,8 @@ namespace Task1
                 int len = rndlen.Next(1,50);
                 MessageBox.Show("Так уж и быть, сам выберу длину массива.\r\nПускай это будет... "+len+"!", "Неправильно, долбаные волки, ШИРОКУЮ НА ШИРОКУЮ!!!");
                 val = len;
+                TB_VALUE.Text = "";
+                TB_VALUE.Text += len;
             }
             else
             {

@@ -8,24 +8,28 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="15*"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="131*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="58*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="7*"/>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="7*"/>
         </Grid.ColumnDefinitions>
-        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="РАЗМЕР МАССИВА ---&gt;" FontSize="20" Margin="10,10,10,10"/>
-        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="&lt;--- РАЗМЕР МАССИВА" Grid.Column="2" FontSize="20" Margin="10,10,10,10"/>
-        <TextBox x:Name="TB_VALUE" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" Text="Число" TextWrapping="Wrap" Margin="10,10,10,35" FontSize="20"/>
-        <TextBox x:Name="TB_INPUT" Grid.Row="1" Text="Начальный массив" TextWrapping="Wrap" Margin="10,10,10,10" IsReadOnly="True"/>
-        <TextBox x:Name="TB_OUTPUT" Grid.Column="2" Grid.Row="1" Text="Массив после преобразования" TextWrapping="Wrap" Margin="10,10,10,10" IsReadOnly="True"/>
-        <Button Content="Генерация" Grid.Column="1" Margin="10,0,10,10" Width="80" Click="Button_Click" Height="20" VerticalAlignment="Bottom"/>
-        <TextBlock Grid.Column="1" Margin="10,10,10,250" Grid.Row="1" Text="Минимальный элемент:" TextWrapping="Wrap" FontSize="10" TextAlignment="Center"/>
-        <TextBox x:Name="TB_MINIMAL" Grid.Column="1" Margin="10,45,10,0" Grid.Row="1" Text="Число" TextWrapping="Wrap" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="44" VerticalAlignment="Top" IsReadOnly="True"/>
-        <TextBlock Grid.Column="1" Margin="10,120,10,60" Grid.Row="1" Text="Сумма элементов, располеженных между первым и последним положительными элементами массива:" TextWrapping="Wrap" FontSize="10" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="РАЗМЕР МАССИВА ---&gt;" FontSize="20" Margin="10,10,10,10" Grid.RowSpan="2"/>
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="&lt;--- РАЗМЕР МАССИВА" Grid.Column="2" FontSize="20" Margin="10,10,10,10" Grid.RowSpan="2"/>
+        <TextBox x:Name="TB_VALUE" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" Text="Число" TextWrapping="Wrap" Margin="10,0,10,9" FontSize="20" Height="42" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="TB_INPUT" Grid.Row="2" Text="Начальный массив" TextWrapping="Wrap" Margin="10,10,10,10" IsReadOnly="True" Grid.RowSpan="4"/>
+        <TextBox x:Name="TB_OUTPUT" Grid.Column="2" Grid.Row="2" Text="Массив после преобразования" TextWrapping="Wrap" Margin="10,10,10,10" IsReadOnly="True" Grid.RowSpan="4"/>
+        <Button Content="Генерация" Grid.Column="1" Margin="10,2,10,2" Click="Button_Click" Grid.Row="1"/>
+        <TextBlock Grid.Column="1" Margin="10,10,10,5" Grid.Row="2" Text="Минимальный элемент:" TextWrapping="Wrap" FontSize="10" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBox x:Name="TB_MINIMAL" Grid.Column="1" Margin="10,10,10,15" Grid.Row="3" Text="Число" TextWrapping="Wrap" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+        <TextBlock Grid.Column="1" Margin="10,10,10,6" Grid.Row="4" Text="Сумма элементов, располеженных между первым и последним положительными элементами массива:" TextWrapping="Wrap" FontSize="10" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" FontWeight="Bold">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1"/>
@@ -35,7 +39,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBox x:Name="TB_SUMMARY" Grid.Column="1" Margin="10,235,10,0" Grid.Row="1" Text="Число" TextWrapping="Wrap" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="44" VerticalAlignment="Top" IsReadOnly="True">
+        <TextBox x:Name="TB_SUMMARY" Grid.Column="1" Margin="10,10,10,10" Grid.Row="5" Text="Число" TextWrapping="Wrap" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" IsReadOnly="True">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1"/>
