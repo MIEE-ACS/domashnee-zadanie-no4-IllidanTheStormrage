@@ -45,6 +45,15 @@ namespace Task1
                 TB_VALUE.Text = "";
                 TB_VALUE.Text += len;
             }
+            else if (int.Parse(a) <= 0)
+            {
+                Random rndlen = new Random(DateTime.Now.Millisecond);
+                int len = rndlen.Next(1, 50);
+                MessageBox.Show("Так уж и быть, сам выберу длину массива.\r\nПускай это будет... " + len + "!", "Отрицательно число это КРИНЖ!!!");
+                val = len;
+                TB_VALUE.Text = "";
+                TB_VALUE.Text += len;
+            }
             else
             {
                 val = int.Parse(TB_VALUE.Text);
@@ -144,6 +153,14 @@ namespace Task1
 
             TB_MINIMAL.Text += Math.Round(mini,3);
             TB_SUMMARY.Text += Math.Round(sum,3);
+        }
+
+        private void TB_VALUE_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (!int.TryParse(TB_VALUE.Text, out int n))
+            {
+                TB_VALUE.Clear();
+            }
         }
     }
 }

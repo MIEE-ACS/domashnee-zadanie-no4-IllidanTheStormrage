@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Task1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Приветики-пистолетики" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="61*"/>
@@ -23,7 +23,7 @@
         </Grid.ColumnDefinitions>
         <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="РАЗМЕР МАССИВА ---&gt;" FontSize="20" Margin="10,10,10,10" Grid.RowSpan="2"/>
         <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="&lt;--- РАЗМЕР МАССИВА" Grid.Column="2" FontSize="20" Margin="10,10,10,10" Grid.RowSpan="2"/>
-        <TextBox x:Name="TB_VALUE" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" Text="Число" TextWrapping="Wrap" Margin="10,0,10,9" FontSize="20" Height="42" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="TB_VALUE" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" Text="Число" TextWrapping="Wrap" Margin="10,0,10,9" FontSize="20" Height="42" VerticalAlignment="Bottom" GotFocus="TB_VALUE_GotFocus"/>
         <TextBox x:Name="TB_INPUT" Grid.Row="2" Text="Начальный массив" TextWrapping="Wrap" Margin="10,10,10,10" IsReadOnly="True" Grid.RowSpan="4"/>
         <TextBox x:Name="TB_OUTPUT" Grid.Column="2" Grid.Row="2" Text="Массив после преобразования" TextWrapping="Wrap" Margin="10,10,10,10" IsReadOnly="True" Grid.RowSpan="4"/>
         <Button Content="Генерация" Grid.Column="1" Margin="10,2,10,2" Click="Button_Click" Grid.Row="1"/>

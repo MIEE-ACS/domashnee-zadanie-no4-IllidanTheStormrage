@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SuperMassive"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Cringe the Horizon" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="79*"/>
@@ -22,8 +22,8 @@
         </Grid.ColumnDefinitions>
         <Label Content="Размеры массива:" Margin="10,10,4,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15"/>
         <TextBox x:Name="TB_OUT" Grid.Row="1" Text="Массив" TextWrapping="Wrap" Margin="50,27,21,28" Grid.ColumnSpan="4" Grid.RowSpan="2" IsReadOnly="True"/>
-        <TextBox x:Name="TB_IN_HEIGHT" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="1,10,2,10" TextWrapping="Wrap" FontSize="15" FontWeight="Bold" Text="Число" Grid.Column="1"/>
-        <TextBox x:Name="TB_IN_WIDTH" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="3,10,3,10" Text="Число" TextWrapping="Wrap" FontSize="15" FontWeight="Bold" Grid.Column="3"/>
+        <TextBox x:Name="TB_IN_HEIGHT" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="1,10,2,10" TextWrapping="Wrap" FontSize="15" FontWeight="Bold" Text="Число" Grid.Column="1" GotFocus="TB_IN_HEIGHT_GotFocus"/>
+        <TextBox x:Name="TB_IN_WIDTH" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="3,10,3,10" Text="Число" TextWrapping="Wrap" FontSize="15" FontWeight="Bold" Grid.Column="3" GotFocus="TB_IN_WIDTH_GotFocus"/>
         <Label Content="на" Margin="4,10,3,10" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="2"/>
         <Button Content="Сгенерировать!" Grid.Column="4" FontSize="15" FontWeight="Bold" Click="Button_Click" Margin="101,10,100,11" Grid.ColumnSpan="2"/>
         <TextBlock Grid.Column="4" Margin="10,27,2,2" Grid.Row="1" Text="Суммы элементов в строках, которые содержать хотя бы один отрицательный элемент:" TextWrapping="Wrap" TextAlignment="Center" FontSize="10" FontWeight="Bold"/>

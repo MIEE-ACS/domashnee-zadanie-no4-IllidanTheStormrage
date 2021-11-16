@@ -51,7 +51,18 @@ namespace SuperMassive
                 TB_IN_WIDTH.Text += width;
 
             }
-            else //наши значения
+            else if (int.Parse(a) <= 0 || int.Parse(b) <= 0)
+            {
+                Random rndlen = new Random(DateTime.Now.Millisecond);
+                height = rndlen.Next(1, 25);
+                width = rndlen.Next(1, 25);
+                MessageBox.Show("Так уж и быть, сам выберу размеры массива.\r\nПускай массив будет... " + height + " на " + width + "!", "Отрицательные числа это КРИНЖ!!!");
+                TB_IN_HEIGHT.Text = "";
+                TB_IN_HEIGHT.Text += height;
+                TB_IN_WIDTH.Text = "";
+                TB_IN_WIDTH.Text += width;
+            }
+            else
             {
                 width = int.Parse(TB_IN_HEIGHT.Text);
                 height = int.Parse(TB_IN_WIDTH.Text);
@@ -132,6 +143,22 @@ namespace SuperMassive
                         TB_OUT_STRISTLB.Text += "Строка: " + (i + 1) + " Столбец: " + (j + 1) + "\r\n";
                     }
                 }
+        }
+
+        private void TB_IN_HEIGHT_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if(!int.TryParse(TB_IN_HEIGHT.Text, out int n))
+            {
+                TB_IN_HEIGHT.Clear();
+            }
+        }
+
+        private void TB_IN_WIDTH_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (!int.TryParse(TB_IN_WIDTH.Text, out int n))
+            {
+                TB_IN_WIDTH.Clear();
+            }
         }
     }
 }
